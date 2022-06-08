@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Cheatsheet</title>
+    <link rel='stylesheet' href='./Resources/css/style.css'>
+</head>
+<body>
+    <h1>Coding Cheat Sheet</h1>
+      <h2 class="html">HTML5</h2>
+
+        <h3 class="Structure">Structure</h3>
+          <h4>Boilerplate</h4>
+            <p>A boilerplate code, boilerplate for short, is a section of code that you should add at the start of every project. 
+               The boilerplate tells the browser how to interpret the code. The browser can load your website without a boilerplate. Your website, however, may not be as polished as you like. <br> <br>
+               <div>
+               <code>
+                 &lt;!DOCTYPE html&gt; <br>
+                 &lt;html lang='en'&gt; <br>
+                 <span class='indent1'>&lt;head&gt;</span> <br>
+                 <span class='indent2'>&lt;meta charset="UTF-8"&gt;</span> <br>
+                 <span class='indent2'>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span> <br>
+                 <span class='indent2'>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span> <br>
+                 <span class='indent2'>&lt;title&gt;&lt;/title&gt;</span> <br>
+                 <span class='indent2'>&lt;link rel='stylesheet' href='./Resources/css/style.css'&gt;</span> <br>
+                 <span class='indent1'>&lt;/head&gt;</span> <br>
+                 <span class='indent1'>&lt;body&gt;</span> <br>
+                 <span class='indent1'>&lt;/body&gt;</span> <br>
+                 &lt;/html&gt;
+               </code></div></p>
+
+          <h4>Head</h4>
+            <p>The head section contains meta information about your website. Aside from the title, code in the head section will not be viewable to the audience. 
+               The contents of the <code>&lt;title&gt;</code> element is shown in the tab section.</p>
+
+          <h4>Body</h4>
+            <p>The body section contains the bulk of your code. Anything visible to the audience will be in the body section.</p>
+
+
+        <h3 class='Text'>Text</h3>
+          <h4>Headings</h4>
+            <p>HTML5 has six "levels" of headings: <br />
+               <code>&lt;h1&gt;</code> is used for main headings <br /> 
+               <code>&lt;h2&gt;</code> is used for subheadings <br />
+               If there are further sections under the subheadings then the <code>&lt;h3&gt;</code> element is used, and so on...</p>
+          <h4>Paragraphs</h4>
+            <p>To create a paragraph, surround the words that make up the paragraph with an opening <code>&lt;p&gt;</code> tag and closing <code>&lt;/p&gt;</code> tag.</p>
+            <p>By default, a browser will show each paragraph on a new line with some space between it and any subsequent paragraphs.</p>
+          <h4>Text Elements</h4>
+            <table class='text'>
+              <thead>
+                <th scope='col'>Element</th>
+                <th scope='col'>Name</th>
+                <th scope='col'>Description</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;b&gt;</code></td>
+                  <td>Bold</td>
+                  <td>Words enclosed in this element will appear <b>bold</b>.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;i&gt;</code></td>
+                  <td>Italic</td>
+                  <td>Words enclosed in this element will appear <i>italic</i>.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;sup&gt;</code></td>
+                  <td>Superscript</td>
+                  <td>Words enclosed in this element will be displayed as a superscript. For example, E=MC<sup>2</sup>.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;sub&gt;</code></td>
+                  <td>Subscript</td>
+                  <td>Words enclosed in this element will be displayed as a subscript. For example, H<sub>2</sub>O.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;br /&gt;</code></td>
+                  <td>Line Break</td>
+                  <td>Adds a line break in the middle of a paragraph.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;hr /&gt;</code></td>
+                  <td>Horizontal Rules</td>
+                  <td>Creates a break between themes with a horizontal line.</td>
+                </tr>
+              </tbody>
+            </table>
+          <h4>Semantic Markup - Text</h4>
+            <p>There are some text elements that are not intended to affect the structure of your web pages, but they do add extra information to the pages - they are known as semantic markup.</p>
+            <table class='text' id='semantic'>
+              <thead>
+                <th scope='col'>Element</th>
+                <th scope='col'>Name</th>
+                <th scope='col'>Description</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;strong&gt;</code></td>
+                  <td>Strong</td>
+                  <td>The use of the <code>&lt;strong</code> element indicates that its content has strong importance. Browsers will show the contents of a <code>&lt;strong&gt;</code> element in <b>bold</b>. <br />
+                      Use this element in lieu of the <code>&lt;bold&gt;</code> element.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;em&gt;</code></td>
+                  <td>Emphasis</td>
+                  <td>The use of the <code>&lt;em&gt;</code> element indicates emphasis that subtly changes the meaning of a sentance. Browsers will show the contents of a <code>&lt;em&gt;</code> element in <i>italics</i>. <br />
+                      Use this element in lieu of the <code>&lt;i&gt;</code> element.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;blockquote&gt;</code></td>
+                  <td>Blockquote</td>
+                  <td>Longer quotes that take up an entire paragraph should be enclosed in this element. Browsers tend to indent the contents of the <code>&lt;blockquote&gt;</code> element. <br />
+                      You should not, however, use this element to indent a piece of text.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;q&gt;</code></td>
+                  <td>Quote</td>
+                  <td>Shorter quotes that sit within a paragraph should be enclosed in this element. Browsers should put double quotations are the <code>&lt;q&gt;</code> element. <br />
+                      Many people would avoid using this element.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;abbr&gt;</code></td>
+                  <td>Abbreviations</td>
+                  <td>Abbreviations or acronyms should be enclosed in this element. A <code>title</code> attribute on the opening tag is used to specify the full term.</td>
+                </tr>
+              </tbody>
+            </table>         
+
+        <h3 class='Media'>Media</h3>
+          <h4>Images</h4>
+            <p>To add an image into a webpage you need to use an <code>&lt;img&gt;</code> element. This is an empty element; there is not a closing tag.</p>
+            <table class='media'>
+              <thead>
+                <th scope='col'>Attribute</th>
+                <th scope='col'>Name</th>
+                <th scope='col'>Description</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>src</code></td>
+                  <td>Source</td>
+                  <td>The value of this attribute tells the browser where it can find the image file. This will usually be a relative URL pointing to an image on your own site.</td>
+                </tr>
+                <tr>
+                  <td><code>alt</code></td>
+                  <td>Alternate</td>
+                  <td>The value of this attribute provides a text description of the image which describes the image if you cannot see it. A browser will show the "alt text" in lieu of a picture.</td>
+                </tr>
+                <tr>
+                  <td><code>title</code></td>
+                  <td>Title</td>
+                  <td>The value of this attribute provides additional information about the image. Most browsers will display the title in a tooltip when the audience hovers over the image.</td>
+                </tr>
+              </tbody>
+            </table>
+          <h4>Videos</h4>
+            <p>The <code>&lt;video&gt;</code> element has a number of attributes which allow you to control video playback. 
+               If the browser does not support the <code>&lt;video&gt;</code> element or the format of video used, 
+               it will display whatever is between the opening <code>&lt;video&gt;</code> and close <code>&lt;/video&gt;</code> tags.</p>
+            <table class='media'>
+              <thead>
+                <th scope='col'>Attribute</th>
+                <th scope='col'>Name</th>
+                <th scope='col'>Description</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>src</code></td>
+                  <td>Source</td>
+                  <td>The value of this attribute tells the browser where it can find the video file. This will usually be a relative URL pointing to an image on your own site.</td>
+                </tr>
+                <tr>
+                  <td><code>preload</code></td>
+                  <td>Preload</td>
+                  <td>This attribute tells the browser what to do when the page loads. It can have one of three values: 
+                    <ol>
+                      <li><code>none</code> - The browser should not load the video until the user presses play.</li>
+                      <li><code>auto</code> - The browser should download the video when the page loads.</li>
+                      <li><code>metadata</code> - The browser should just collect information such as the size, first frame, track list, and duration.</li>
+                    </ol>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>poster</code></td>
+                  <td>Poster</td>
+                  <td>The value of this attribute specifies an image to show while the video is downloading or until the user tells the video to play.</td>
+                </tr>
+                <tr>
+                  <td><code>controls</code></td>
+                  <td>Controls</td>
+                  <td>When used, this attribute indicates that the browser should supply its own controls for playback.</td>
+                </tr>
+                <tr>
+                  <td><code>autoplay</code></td>
+                  <td>Autoplay</td>
+                  <td>When used, this attribute specifies that the file should play automatically.</td>
+                </tr>
+                <tr>
+                  <td><code>loop</code></td>
+                  <td>Loop</td>
+                  <td>When used, this attribute indicates that the video should start playing again once it has ended.</td>
+                </tr>
+              </tbody>
+            </table>
+          <h4>Audio</h4>
+            <p>The <code>&lt;audio&gt;</code> element allows the developer to include audio files in their pages. 
+               The syntax, attributes, and function of the <code>&lt;audio&gt;</code> element is similar to that of the <code>&lt;video&gt;</code> element.</p>
+               <table class='media'>
+                <thead>
+                  <th scope='col'>Attribute</th>
+                  <th scope='col'>Name</th>
+                  <th scope='col'>Description</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>src</code></td>
+                    <td>Source</td>
+                    <td>The value of this attribute tells the browser where it can find the video file. This will usually be a relative URL pointing to an image on your own site.</td>
+                  </tr>
+                  <tr>
+                    <td><code>preload</code></td>
+                    <td>Preload</td>
+                    <td>This attribute tells the browser what to do when the page loads. It can have one of three values: 
+                      <ol>
+                        <li><code>none</code> - The browser should not load the video until the user presses play.</li>
+                        <li><code>auto</code> - The browser should download the video when the page loads.</li>
+                        <li><code>metadata</code> - The browser should just collect information such as the size, first frame, track list, and duration.</li>
+                      </ol>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>controls</code></td>
+                    <td>Controls</td>
+                    <td>When used, this attribute indicates that the browser should supply its own controls for playback.</td>
+                  </tr>
+                  <tr>
+                    <td><code>autoplay</code></td>
+                    <td>Autoplay</td>
+                    <td>When used, this attribute specifies that the file should play automatically.</td>
+                  </tr>
+                  <tr>
+                    <td><code>loop</code></td>
+                    <td>Loop</td>
+                    <td>When used, this attribute indicates that the video should start playing again once it has ended.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        <h3 class='Lists'>Lists</h3>
+          <p>There are plenty of occasions when we need to use lists. HTML provides us with three different types: 
+            <ul>
+              <li>Ordered lists are lists where each item in the list is numbered.</li>
+              <li>Unordered lists are lists that begin with a bullet point (rather than characters that indicate order).</li>
+              <li>Definition lists are made up of a set of terms along with the definitions for each of those terms.</li>
+            </ul>
+          </p>
+          <h4>List Elements</h4>
+          <table class='lists'>
+            <thead>
+              <th scope='col'>Element</th>
+              <th scope='col'>Name</th>
+              <th scope='col'>Description</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>&lt;ol&gt;</code></td>
+                <td>Ordered List</td>
+                <td>Creates an ordered list.</td>
+              </tr>
+              <tr>
+                <td><code>&lt;ul&gt;</code></td>
+                <td>Unordered List</td>
+                <td>Creats an unordered list.</td>
+              </tr>
+              <tr>
+                <td><code>&lt;li&gt;</code></td>
+                <td>List Item</td>
+                <td>Every item in a list needs to be placed between an opening <code>&lt;li&gt;</code> tag and a closing <code>&lt;/li&gt;</code> tag.</td>
+              </tr>
+              <tr>
+                <td><code>&lt;dl&gt;</code></td>
+                <td>Definition List</td>
+                <td>Creats a definition list.</td>
+              </tr>
+              <tr>
+                <td><code>&lt;dt&gt;</code></td>
+                <td>Definition Term</td>
+                <td>This is used to contain the term being defined.</td>
+              </tr>
+              <tr>
+                <td><code>&lt;dd&gt;</code></td>
+                <td>Definition</td>
+                <td>This is used to contain the definition.</td>
+              </tr>
+            </tbody>
+          </table>
+        <h3 class='Tables'>Tables</h3>
+          <p>A table represents information in a grid format. Examples of tables include financial reports, TV schedules, and sports results.</p>
+          <h4>Table Elements</h4>
+            <table class='tables'>
+              <thead>
+                <tr>
+                  <th scope='col'>Element</th>
+                  <th scope='col'>Name</th>
+                  <th scope='col'>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;table&gt;</code></td>
+                  <td>Table</td>
+                  <td>The <code>&lt;table&gt;</code> element is used to create a table. The contents of the table are written out row by row.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;tr&gt;</code></td>
+                  <td>Table Row</td>
+                  <td>You indicate the start of each row by using the opening <code>&lt;tr&gt;</code> tag. It is followed by one or more <code>&lt;td&gt;</code> element. 
+                      At the end of the row you use a closing <code>&lt;/tr&gt;</code> tag.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;td&gt;</code></td>
+                  <td>Table Data</td>
+                  <td>Each cell of a table is represented using a <code>&lt;td&gt;</code> element.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;th&gt;</code></td>
+                  <td>Table Heading</td>
+                  <td>The <code>&lt;th&gt;</code> element is used like the <code>&lt;td&gt;</code> element but its purpose is to represent the heading for either a column or a row.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;thead&gt;</code></td>
+                  <td>Table Head</td>
+                  <td>The headings of the table should sit inside the <code>&lt;thead&gt;</code> element.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;tbody&gt;</code></td>
+                  <td>Table Body</td>
+                  <td>The body should sit inside the <code>&lt;tbody&gt;</code> element.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;tfoot&gt;</code></td>
+                  <td>Table Footer</td>
+                  <td>The footer belongs inside the <code>&lt;tfoot&gt;</code> element.</td>
+                </tr>
+              </tbody>
+            </table>
+          <h4>Table Attributes</h4>
+            <p>There are a few attributes that can affect how the table displays data.</p>
+            <table class='tables'>
+              <thead>
+                <tr>
+                  <th scope='col'>Attribute</th>
+                  <th scope='col'>Name</th>
+                  <th scope='col'>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>colspan</code></td>
+                  <td>Column Span</td>
+                  <td>The <code>colspan</code> attribute can be used on a <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> element and indicates how many columns that cell should run across.</td>
+                </tr>
+                <td><code>rowspan</code></td>
+                <td>Row Span</td>
+                <td>The <code>rowspan</code> attribute can be used on a <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> element and indicates how many rows that cell should span down the table.</td>
+              </tr>
+              <tr>
+                <td><code>scope</code></td>
+                <td>Scope</td>
+                <td>The <code>&lt;scope&gt;</code> attribute is used as a semantic to indicate whether a <code>&lt;th&gt;</code> element is a heading for a row or column.</td>
+              </tr>
+              </tbody>
+            </table>
+
+        <h3 class='Links'>Links</h3>
+          <p>Links are created using the <code>&lt;a&gt;</code> element. Users can click on anything between the opening <code>&lt;a&gt;</code> and close <code>&lt;/a&gt;</code> tags.
+             You specify which page you want to link to using the <code>href</code> attribute.</p>
+          <ul>
+            <li>Linking to other sites
+              <ul>
+                <li>The value of the <code>href</code> attribute should be the full web address for the site, which is known as an <strong>absolute</strong> URL.</li>
+              </ul>
+            </li>
+            <li> Linking to other pages on the same site
+              <ul>
+                <li>When you are linking to other pages within the same site, you do not need to specify the domain name in the URL. You can use a shorthand known as a <strong>relative</strong> URL.</li>
+              </ul>
+            </li>
+          </ul>
+          <h4>Relative URL</h4>
+            <p>On larger websites it's a good idea to organize your code by placing the pages for each different section of the site into a new folder. 
+               Folders on a website are sometimes referred to as <em>directories</em>.</p>
+            <ul>
+              <li>examplearts</li>
+              <ul>
+                <li>index.html</li>
+                <li>
+                  images
+                  <ul>
+                    <li>logo.gif</li>
+                  </ul>
+                </li>
+                <li>
+                  movies
+                  <ul>
+                    <li>
+                      cinema
+                      <ul>
+                        <li>index.html</li>
+                        <li>listings.html</li>
+                        <li>reviews.html</li>
+                      </ul>
+                    </li>
+                    <li>
+                      dvd
+                      <ul>
+                        <li>index.html</li>
+                        <li>reviews.html</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  music
+                  <ul>
+                    <li>index.html</li>
+                    <li>listings.html</li>
+                    <li>reviews.html</li>
+                  </ul>
+                </li>
+              </ul>
+            </ul>
+            <table class='links'>
+              <thead>
+                <th scope='col'>Relative Link Type</th>
+                <th scope='col'>Definition</th>
+                <th scope='col'>Example</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Same Folder</td>
+                  <td>To link to a file in the same folder, just use the file name. (Nothing else is needed.)</td>
+                  <td>To link to music reviews from the music homepage: <code>&lt;a href='reviews.html'&gt;</code>Reviews<code>&lt;/a&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>Child Folder</td>
+                  <td>For a child folder, use the name of the child folder, followed by a forward slash, then the file name.</td>
+                  <td>To link to music listings from the homepage: <code>&lt;a href='music/listings.html'&gt;</code>Listings<code>&lt;/a&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>Grandchild Folder</td>
+                  <td>Use the name of the child folder, followed by a forward slash, then the name of the grandchild folder,<br> 
+                      followed by another forward slash, then the file name.</td>
+                  <td>To link to DVD reviews from the homepage: <code>&lt;a href='movies/dvd/reviews.html'&gt;</code>Reviews<code>&lt;/a&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>Parent Folder</td>
+                  <td>Use ../ to indicate the folder above the current one, then follow it with the file name.</td>
+                  <td>To link to the homepage from the music reviews: <code>&lt;a href=../index.html'&gt;</code>Home<code>&lt;/a&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>Grandparent Folder</td>
+                  <td>Repeat the ../ to indicate that you want to go up two folders (rather than one), then follow it with the file name.</td>
+                  <td>To link to the homepage from DVD reviews: <code>&lt;a href='../../index.html'&gt;</code>Home<code>&lt;/a&gt;</code></td>
+                </tr>
+              </tbody>
+            </table>
+
+        <h3 class='Forms'>Forms</h3>
+          <p>The <code>&lt;form&gt;</code> element allows you to collect information from vistors to your site. 
+             Whether you are adding a simple search box to your website or you need to create more complicated insurance appliations, HTML forms give you a set of elements to collect data from your users.</p>
+          <p>Form controls live inside a <code>&lt;form&gt;</code> element. 
+             This element should always carry the <code>action</code> attribute and will usually have a <code>method</code> and <code>id</code> attribute too.</p>
+          <h4><code>action</code></h4>
+            <p>Every <code>&lt;form&gt;</code> element requires an <code>action</code> attribute. Its value is the URL for the page on the server that wil receive the information in the form when it is submitted.</p>
+          <h4><code>method</code></h4>
+            <p>Forms can be sent using one of two methods: <code>get</code> or <code>post</code>. <br>
+               With the <code>get</code> method, the values from the form are added to the end of the URL specified in the <code>action</code> attribute. The <code>get</code> method is ideal for: 
+               <ul>
+                 <li>short forms (such as search boxes)</li>
+                 <li>when you are just retrieving data from the web server (not sending information that should be added to or delted from a database)</li>
+               </ul>
+               With the <code>post</code> method the values are sent in what are known as HTTP headers, As a rule of thumb you should use the <code>post</code> method if your form:
+              <ul>
+                <li>allows users to upload a file</li>
+                <li>is very long</li>
+                <li>contains sensitive data (e.g. passwords)</li>
+                <li>adds information to, or deletes information from, a database</li>
+              </ul></p>
+          <h4>Input</h4>
+            <p>The <code>&lt;input&gt;</code> element is used to create several different form controls. The value of the <code>type</code> attribute determines what kind of input they will be creating. <br>
+               The <code>name</code> attribute identifies the form control and is sent along with the information they enter to the server.</p>
+            <table class='forms'>
+              <thead>
+                <th scope='col'>Input type</th>
+                <th scope='col'>Definition</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>text</code></td>
+                  <td>Creates a single-line text input</td>
+                </tr>
+                <tr>
+                  <td><code>password</code></td>
+                  <td>Creates a single-line text input. The user's input is censored.</td>
+                </tr>
+                <tr>
+                  <td><code>radio</code></td>
+                  <td>Creates radio buttons that allow users to pick just one of a number of options. <br>
+                      The <code>value</code> attribute indicates the value that is sent to the server for the selected option. <br>
+                      The <code>checked</code> attribute can be used to indicate which value should be selected when the page loads.</td>
+                </tr>
+                <tr>
+                  <td><code>checkbox</code></td>
+                  <td>Creates checkboxes that allow users to select (and deselect) one or more options in answer to a question. <br>
+                      The <code>value</code> attribute indicates the value sent to the server if this checkbox is checked. <br>
+                      The <code>checked</code> attribute can be used to indicate which value should be selected when the page loads.</td>
+                </tr>
+                <tr>
+                  <td><code>file</code></td>
+                  <td>Allows the user to upload a file.</td>
+                </tr>
+                <tr>
+                  <td><code>submit</code></td>
+                  <td>Creates a submit button. <br>
+                      The <code>value</code> attribute is used to control the text that appears on a button.</td>
+                </tr>
+                <tr>
+                  <td><code>image</code></td>
+                  <td>Uses an image in lieu of a submit button. 
+                      The <code>src</code>, <code>width</code>, <code>height</code>, and <code>alt</code> attributes work just like they would when used with the <code>&lt;img&gt;</code> element.</td>
+                </tr>
+              </tbody>
+            </table>
+</body>
+</html>
